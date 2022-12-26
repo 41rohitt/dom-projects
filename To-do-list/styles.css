@@ -1,0 +1,103 @@
+body {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1456324504439-367cee3b3c32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
+    no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#add-task-container {
+  width: 350px;
+  padding: 2rem 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 0 3px;
+  display: flex;
+}
+
+input {
+  flex: 5;
+  margin-right: 1rem;
+  border-radius: 5px;
+  padding: 0.5rem;
+  outline: none;
+}
+
+#add-task {
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 4px;
+  flex: 1;
+  color: #fff;
+  border: 2px solid green;
+  background: green;
+  transition: 0.3s;
+}
+
+#add-task:hover {
+  background-color: #fff;
+  color: green;
+}
+
+.task {
+  width: 100%;
+  background: #fff;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  animation-name: slideRight;
+  transition: 0.4s ease-in;
+}
+
+.task li {
+  list-style-type: none;
+  flex: 4;
+  font-size: 1.8rem;
+}
+
+.task button {
+  flex: 1;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.task .checkTask {
+  color: forestgreen;
+  margin-right: 5px;
+  border: 2px solid forestgreen;
+  font-size: 1.3rem;
+}
+
+.task .deleteTask {
+  color: red;
+  margin-right: 5px;
+  border: 2px solid red;
+  font-size: 1.3rem;
+}
+
+.task .checkTask:hover {
+  background-color: forestgreen;
+  color: #fff;
+}
+
+.task .deleteTask:hover {
+  background-color: red;
+  color: #fff;
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
